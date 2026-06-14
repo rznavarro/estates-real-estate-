@@ -56,34 +56,6 @@ export default function Hero({ onLearnMoreClick, onHomePlansClick }: HeroProps) 
           </p>
         </motion.div>
 
-        {/* Action button grouping */}
-        <motion.div 
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, delay: 0.35, ease: 'easeOut' }}
-          className="mt-12 flex flex-col sm:flex-row items-center gap-4 w-full justify-center max-w-md"
-        >
-          {/* Main home plans action */}
-          <button 
-            onClick={onHomePlansClick}
-            className="w-full sm:w-auto bg-[#e8e0da] hover:bg-white text-brand font-medium text-xs tracking-widest uppercase px-8 py-4.5 rounded-sm shadow-2xl hover:shadow-white/20 transform hover:-translate-y-0.5 transition-all flex items-center justify-center space-x-2.5 font-sans group cursor-pointer"
-          >
-            <Home className="w-4 h-4 text-brand transform group-hover:scale-110 transition-transform" />
-            <span>Home Plans</span>
-            <span className="text-[10px] tracking-normal">→</span>
-          </button>
-
-          {/* Cinematic Tour Action */}
-          <button 
-            onClick={() => setShowVideoModal(true)}
-            className="w-full sm:w-auto bg-white/10 backdrop-blur-md hover:bg-white/20 text-[#e8e0da] border border-white/20 hover:border-white/40 font-semibold text-xs tracking-widest uppercase px-8 py-4.5 rounded-sm shadow-xl transform hover:-translate-y-0.5 transition-all flex items-center justify-center space-x-2.5 font-sans cursor-pointer"
-          >
-            <span className="p-1 px-1.5 bg-[#66c085] rounded-full flex items-center text-white mr-1 shadow-lg">
-              <Play className="w-3 h-3 fill-white text-[#66c085]" />
-            </span>
-            <span>Cinematic Tour</span>
-          </button>
-        </motion.div>
 
         {/* Feature quick ribbon */}
         <motion.div 
