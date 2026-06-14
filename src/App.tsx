@@ -66,23 +66,23 @@ export default function App() {
     if (isTourActive) return;
     setIsTourActive(true);
 
-    // 11 seconds across 5 stops
-    const stops: { id: string; delay: number }[] = [
-      { id: 'hero',         delay: 0 },
-      { id: 'floor-plans',  delay: 2200 },
-      { id: 'amenities',    delay: 4400 },
-      { id: 'cinema-tour',  delay: 6600 },
-      { id: 'contact',      delay: 8800 },
-    ];
+    const duration = 11000;
+    const startY = window.scrollY;
+    const endY = document.documentElement.scrollHeight - window.innerHeight;
+    const startTime = performance.now();
 
-    stops.forEach(({ id, delay }) => {
-      setTimeout(() => {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, delay);
-    });
+    const animate = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      window.scrollTo(0, startY + (endY - startY) * progress);
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        setIsTourActive(false);
+      }
+    };
 
-    setTimeout(() => setIsTourActive(false), 11000);
+    requestAnimationFrame(animate);
   };
 
   // Keyboard shortcut '2' to start guided tour
