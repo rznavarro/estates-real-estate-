@@ -303,27 +303,6 @@ export default function App() {
             </ul>
           </div>
 
-          {/* Col 4: Equal Opportunity certification logos */}
-          <div className="md:col-span-3 space-y-4">
-            <h4 className="text-[10px] font-bold uppercase tracking-widest text-[#a89286]">Certifications</h4>
-            
-            <div className="flex items-center space-x-3.5 opacity-65">
-              {/* Custom SVG Equal Housing Opportunity icon */}
-              <div className="w-10 h-10 border border-[#e8e0da]/40 flex flex-col items-center justify-center p-0.5 rounded-sm">
-                <span className="text-[8px] text-center font-bold tracking-tight uppercase leading-none font-sans block text-white">EQUAL</span>
-                <span className="text-[7px] text-center font-light uppercase leading-none font-sans block text-white">HOUSING</span>
-                <span className="text-[7px] text-center font-light uppercase leading-none font-sans block text-white">OPPORTUNITY</span>
-              </div>
-              <div className="text-[10px] text-[#e8e0da]/60 leading-normal font-light">
-                Broker participation welcome. Oral representations cannot be relied upon as correctly stating representations of the developer.
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-2 text-[10px] text-[#e8e0da]/40 bg-white/5 p-2 rounded-md">
-              <Info className="w-4 h-4 text-[#e8e0da]/50 shrink-0" />
-              <span>Prices, plans and specifications subject to final platting approvals.</span>
-            </div>
-          </div>
 
         </div>
 
