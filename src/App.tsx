@@ -9,7 +9,7 @@ import Amenities from './components/Amenities';
 import LocationMap from './components/LocationMap';
 import ContactForm from './components/ContactForm';
 import { GENERAL_FAQ } from './data';
-import { ChevronDown, Plus, Minus, MessageSquare, Send, CheckCircle2, Award, ShieldAlert, FileText, Info, Maximize, Minimize } from 'lucide-react';
+import { ChevronDown, Plus, Minus, MessageSquare, Send, CheckCircle2, Award, ShieldAlert, FileText, Info, Maximize, Minimize, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function App() {
@@ -432,18 +432,18 @@ export default function App() {
         </AnimatePresence>
 
         {/* The Toggle Button */}
-        <button 
+        <button
           onClick={() => setIsChatOpen(!isChatOpen)}
-          className="bg-[#66c085] hover:bg-[#52ad71] text-white p-4.5 rounded-full shadow-2xl hover:shadow-emerald-500/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 relative group cursor-pointer"
+          className="bg-[#66c085] hover:bg-[#52ad71] text-white p-3.5 rounded-full shadow-2xl hover:shadow-emerald-500/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 relative group cursor-pointer"
+          title="Online Advisor"
         >
           {isChatOpen ? (
-            <span className="text-sm font-sans font-extrabold uppercase tracking-widest select-none block px-3">✕ Close Chat</span>
+            <X className="w-5 h-5 text-white" />
           ) : (
-            <div className="flex items-center space-x-2 relative">
-              <span className="absolute -top-1.5 -right-1.5 w-3 h-3 rounded-full bg-red-500 animate-ping"></span>
-              <span className="absolute -top-1.5 -right-1.5 w-3 h-3 rounded-full bg-red-500 border border-white"></span>
-              <MessageSquare className="w-5.5 h-5.5 text-white fill-current" />
-              <span className="text-xs font-sans font-black uppercase tracking-wider text-white pr-1">Online Advisor</span>
+            <div className="relative">
+              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-red-500 border border-white"></span>
+              <MessageSquare className="w-5 h-5 text-white fill-current" />
             </div>
           )}
         </button>
