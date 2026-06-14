@@ -6,7 +6,6 @@ import VideoTour from './components/VideoTour';
 import ShowcaseRows from './components/ShowcaseRows';
 import FloorPlans from './components/FloorPlans';
 import Amenities from './components/Amenities';
-import LocationMap from './components/LocationMap';
 import ContactForm from './components/ContactForm';
 import { GENERAL_FAQ } from './data';
 import { ChevronDown, Plus, Minus, MessageSquare, Send, CheckCircle2, Award, ShieldAlert, FileText, Info, Maximize, Minimize, X } from 'lucide-react';
@@ -70,7 +69,7 @@ export default function App() {
 
   // Setup intersection observer to highlight navbar links on scroll
   useEffect(() => {
-    const sections = ['hero', 'floor-plans', 'amenities', 'location', 'contact'];
+    const sections = ['hero', 'floor-plans', 'amenities', 'contact'];
     const handleScroll = () => {
       let currentSection = 'hero';
       const scrollPosition = window.scrollY + 200;
@@ -184,10 +183,7 @@ export default function App() {
         {/* AMENITIES SPOTLIGHT SLIDER */}
         <Amenities />
 
-        {/* LOCATIONCommute INDEX */}
-        <LocationMap />
-
-        {/* ACCORDION FAQ SECTION */}
+{/* ACCORDION FAQ SECTION */}
         <section className="py-20 bg-white border-t border-[#e8dcd0]/50">
           <div className="max-w-4xl mx-auto px-6">
             <div className="text-center space-y-4 mb-16">
@@ -298,7 +294,6 @@ export default function App() {
               <li><button onClick={() => handleScrollToSection('floor-plans')} className="hover:text-white cursor-pointer hover:underline text-left">Home Floor Plans</button></li>
               <li><button onClick={() => handleScrollToSection('site-plan')} className="hover:text-white cursor-pointer hover:underline text-left">Master Site Plan</button></li>
               <li><button onClick={() => handleScrollToSection('amenities')} className="hover:text-white cursor-pointer hover:underline text-left font-bold text-brand-light">Resort Amenities</button></li>
-              <li><button onClick={() => handleScrollToSection('location')} className="hover:text-white cursor-pointer hover:underline text-left">Location Map Commute</button></li>
               <li><button onClick={() => handleScrollToSection('contact')} className="hover:text-white cursor-pointer hover:underline text-left">Register Bookings Slot</button></li>
             </ul>
           </div>

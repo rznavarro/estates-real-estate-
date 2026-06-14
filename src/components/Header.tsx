@@ -141,14 +141,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
             >
               Amenities
             </a>
-            <a 
-              href="#location" 
-              onClick={(e) => { e.preventDefault(); handleLinkClick('location'); }}
-              className={`hover:text-brand/80 relative pb-1 transition-all ${activeSection === 'location' ? 'font-bold border-b border-brand text-[#33221e]' : 'text-[#664a46]'}`}
-            >
-              Location
-            </a>
-            <a 
+<a 
               href="#contact" 
               onClick={(e) => { e.preventDefault(); handleLinkClick('contact'); }}
               className={`hover:text-brand/80 relative pb-1 transition-all ${activeSection === 'contact' ? 'font-bold border-b border-brand text-[#33221e]' : 'text-[#664a46]'}`}
@@ -219,9 +212,6 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
                   <a href="#amenities" onClick={(e) => { e.preventDefault(); handleLinkClick('amenities'); }} className="text-sm font-sans tracking-widest uppercase font-medium text-brand hover:translate-x-1 transition-transform">
                     Resort Clubhouse Amenities
                   </a>
-                  <a href="#location" onClick={(e) => { e.preventDefault(); handleLinkClick('location'); }} className="text-sm font-sans tracking-widest uppercase font-medium text-brand hover:translate-x-1 transition-transform">
-                    Davie Neighborhood GPS
-                  </a>
                   <a href="#contact" onClick={(e) => { e.preventDefault(); handleLinkClick('contact'); }} className="text-sm font-sans tracking-widest uppercase font-semibold text-[#8b5c43] hover:translate-x-1 transition-transform">
                     Contact & Inquiry Desk
                   </a>
@@ -233,7 +223,6 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
                 <p className="text-[10px] tracking-widest text-[#a89286] font-bold uppercase">CC Homes & Turnberry</p>
                 <div className="flex flex-col space-y-3.5 pl-2 text-xs text-[#7c6358] uppercase font-bold tracking-widest">
                   <a href="#legacy" onClick={(e) => { e.preventDefault(); handleLinkClick('legacy'); }} className="hover:text-brand">About the Legacy</a>
-                  <a href="#map" onClick={(e) => { e.preventDefault(); handleLinkClick('location'); }} className="hover:text-brand">Design Studio Center</a>
                 </div>
               </div>
 
