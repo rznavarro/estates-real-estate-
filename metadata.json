@@ -1,0 +1,6 @@
+{
+  "name": "Estates by Turnberry",
+  "description": "Luxury estates at Davie, Florida by CC Homes & Turnberry. Cloned pre-construction sales portal featuring stunning interactive layouts, customizable floor plans, site masterplan, real consultations, and map.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
