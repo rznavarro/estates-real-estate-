@@ -86,13 +86,6 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
 
             <a href="#amenities" onClick={(e) => { e.preventDefault(); handleLinkClick('amenities'); }} className="hover:text-brand transition-colors">Design Studio</a>
             
-            {/* Phone Number Call */}
-            <a href="tel:305-424-2203" className="flex items-center space-x-2 text-[#66c085] hover:opacity-80 font-bold tracking-normal transition-all text-sm font-sans">
-              <span className="p-1 px-2 border border-[#66c085]/20 rounded-full bg-[#66c085]/10 flex items-center gap-1.5 font-bold">
-                <Phone className="w-3.5 h-3.5 fill-[#66c085] text-transparent" />
-                (305) 424‑2203
-              </span>
-            </a>
           </nav>
 
           {/* Quick Info Mobile */}
@@ -149,12 +142,6 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
               Contact
             </a>
 
-            <span className="w-px h-4 bg-[#664a46]/30"></span>
-
-            <a href="tel:305-424-2203" className="flex items-center space-x-1.5 text-brand hover:opacity-80 font-bold lowercase transition-all">
-              <Phone className="w-3.5 h-3.5" />
-              <span className="font-sans text-xs tracking-tight uppercase font-extrabold">(305) 424‑2203</span>
-            </a>
           </nav>
 
           <div className="lg:hidden">
