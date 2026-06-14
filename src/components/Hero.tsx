@@ -12,13 +12,23 @@ export default function Hero({ onLearnMoreClick, onHomePlansClick }: HeroProps) 
 
   return (
     <section id="hero" className="relative min-h-[85vh] lg:min-h-[92vh] flex items-center justify-center bg-[#f7f4ee] overflow-hidden">
-      {/* 1. Immersive Background Image */}
+      {/* 1. Immersive Background Video */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://www.cchomes.com/wp-content/uploads/2025/10/04-Turnberry-Clubhouse-Pool-View-R01-Beige-1-1600x900.jpg" 
-          alt="Estates by Turnberry Clubhouse Pool rendering" 
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover object-center filter brightness-95 contrast-[1.01]"
-        />
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+          {/* Fallback image if video is not found */}
+          <img
+            src="https://www.cchomes.com/wp-content/uploads/2025/10/04-Turnberry-Clubhouse-Pool-View-R01-Beige-1-1600x900.jpg"
+            alt="Estates by Turnberry Clubhouse Pool rendering"
+            className="w-full h-full object-cover object-center"
+          />
+        </video>
         {/* Soft, luxury ambient vignette overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#261c19]/70 via-transparent to-[#261c19]/30"></div>
       </div>
