@@ -74,7 +74,8 @@ export default function App() {
     const animate = (now: number) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      window.scrollTo(0, startY + (endY - startY) * progress);
+      const currentY = startY + (endY - startY) * progress;
+      document.documentElement.scrollTop = currentY;
       if (progress < 1) {
         requestAnimationFrame(animate);
       } else {
