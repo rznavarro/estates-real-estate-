@@ -41,13 +41,7 @@ export default function Hero({ onLearnMoreClick, onHomePlansClick }: HeroProps) 
           transition={{ duration: 1.1, ease: 'easeOut' }}
           className="space-y-6"
         >
-          {/* Subtle badge */}
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-xs tracking-widest uppercase font-semibold text-[#e8e0da] shadow-lg">
-            <Sparkles className="w-3.5 h-3.5 text-[#e8e0da]" />
-            <span>Extraordinary Living Awaits</span>
-          </div>
-
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-serif font-light tracking-tight text-white drop-shadow-xl select-none leading-none">
+<h1 className="text-4xl sm:text-6xl md:text-8xl font-serif font-light tracking-tight text-white drop-shadow-xl select-none leading-none">
             Estates by Turnberry
           </h1>
 
