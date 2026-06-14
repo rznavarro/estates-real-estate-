@@ -41,7 +41,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
     <>
       {/* SECTION 1: Main Corporate Header (CC Homes) */}
       <header className="w-full bg-[#fcfaf7] border-b border-[#e8dcd0]/55 py-2 px-4 md:px-12 z-30 transition-all">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="flex items-center justify-between">
           <a href="https://www.cchomes.com" target="_blank" rel="noopener noreferrer" className="block focus:outline-none">
             <img 
               src="https://www.cchomes.com/wp-content/themes/cchomes-theme/img/cchomes-logo.svg" 
@@ -109,7 +109,7 @@ export default function Header({ onNavigate, activeSection }: HeaderProps) {
           ? 'sticky top-0 bg-white shadow-md border-b border-[#e8dcd0]/50 py-3 md:py-4 px-4 md:px-12' 
           : 'bg-[#f8f5f0] border-b border-[#e8dcd0]/30 py-4 md:py-6 px-4 md:px-12'
       }`}>
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="flex items-center justify-between">
           <a href="#hero" onClick={(e) => { e.preventDefault(); handleLinkClick('hero'); }} className="block max-w-[170px] md:max-w-[210px] focus:outline-none">
             <img 
               src="https://www.cchomes.com/wp-content/uploads/2024/07/Estates-by-Turnberry-2nd-Logo-small_2.svg" 
