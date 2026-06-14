@@ -424,40 +424,6 @@ export default function App() {
 
       </div>
 
-      {/* FLOATING FULL SCREEN '1' TRIGGER BUTTON */}
-      <div className="fixed bottom-6 left-6 z-40" id="fullscreen-toggle-container">
-        <motion.button
-          id="fullscreen-toggle-button"
-          onClick={toggleFullscreen}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-white/95 hover:bg-white text-stone-800 p-3 px-3.5 rounded-full shadow-2xl border border-[#e8dcd0] flex items-center space-x-2.5 hover:shadow-black/5 active:translate-y-0 transition-all duration-300 relative group cursor-pointer"
-          title="Presiona '1' en el teclado o haz click aquí para pantalla completa"
-        >
-          {/* Keycap styling for digit "1" inside a small luxury frame */}
-          <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#664a46] text-white font-mono font-black text-lg shadow-sm border border-[#e8dcd0]/35 select-none">
-            1
-          </span>
-          <span className="text-xs font-sans font-medium uppercase tracking-wider text-stone-700 pr-1 select-none flex items-center gap-1.5">
-            {isFullscreen ? (
-              <>
-                <Minimize className="w-4 h-4 text-[#664a46]" />
-                Salir Pantalla Completa
-              </>
-            ) : (
-              <>
-                <Maximize className="w-4 h-4 text-[#664a46]" />
-                Pantalla Completa
-              </>
-            )}
-          </span>
-          
-          {/* Hover tooltip explanation */}
-          <div className="absolute bottom-full left-0 mb-3 bg-stone-900 text-white text-[10px] py-1.5 px-3 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-md border border-stone-800 font-sans">
-            Haz click en el <span className="font-bold underline text-emerald-400">1</span> o pulsa la tecla <kbd className="bg-stone-800 px-1 border border-stone-700 rounded text-stone-300 font-mono text-[9px]">1</kbd> para alternar pantalla completa
-          </div>
-        </motion.button>
-      </div>
 
     </div>
   );
