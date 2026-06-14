@@ -59,6 +59,46 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  // Guided tour state
+  const [isTourActive, setIsTourActive] = useState(false);
+
+  const startGuidedTour = () => {
+    if (isTourActive) return;
+    setIsTourActive(true);
+
+    // 11 seconds across 5 stops
+    const stops: { id: string; delay: number }[] = [
+      { id: 'hero',         delay: 0 },
+      { id: 'floor-plans',  delay: 2200 },
+      { id: 'amenities',    delay: 4400 },
+      { id: 'cinema-tour',  delay: 6600 },
+      { id: 'contact',      delay: 8800 },
+    ];
+
+    stops.forEach(({ id, delay }) => {
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, delay);
+    });
+
+    setTimeout(() => setIsTourActive(false), 11000);
+  };
+
+  // Keyboard shortcut '2' to start guided tour
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const tag = document.activeElement?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.getAttribute('contenteditable') === 'true') return;
+      if (e.key === '2') {
+        e.preventDefault();
+        startGuidedTour();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isTourActive]);
+
   // Chat Concierge states
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [chatMessage, setChatMessage] = useState('');
